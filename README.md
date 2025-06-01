@@ -1,1 +1,2 @@
-Trabalho 1 de IA
+Trabalho 1 - IA  
+Felippe Melo Pereira
