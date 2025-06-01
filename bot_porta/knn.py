@@ -22,7 +22,7 @@ def proc_received_photo(photo):
         return -1
 
     emb_norm = normalize([embedding])
-    dist, index = model.kneighbors(emb_norm, n_neighbors=3)
+    dist, index = model.kneighbors(emb_norm, n_neighbors=6)
 
     if dist[0][0] > 0.5: #pessoa desconhecida
         return 0
