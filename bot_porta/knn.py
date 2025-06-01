@@ -9,7 +9,7 @@ x_train = np.loadtxt("treino_emb.txt")
 x_train_norm = normalize(x_train)
 y_train = np.loadtxt("treino_img.txt", dtype=str)
 
-model = KNeighborsClassifier(n_neighbors=6, weights="distance", metric="euclidean")
+model = KNeighborsClassifier(n_neighbors=5, weights="distance", metric="euclidean")
 model.fit(x_train_norm, y_train)
 
 #---------------------------------------------------------------------------------------------------------------
@@ -22,9 +22,9 @@ def proc_received_photo(photo):
         return -1
 
     emb_norm = normalize([embedding])
-    dist, index = model.kneighbors(emb_norm, n_neighbors=6)
+    dist, index = model.kneighbors(emb_norm, n_neighbors=5)
 
-    if dist[0][0] > 0.5: #pessoa desconhecida
+    if dist[0][0] > 0.6: #pessoa desconhecida
         return 0
     else: #pessoa conhecida
         return 1
