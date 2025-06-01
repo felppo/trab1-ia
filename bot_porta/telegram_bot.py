@@ -2,7 +2,7 @@ import telebot
 import os
 import knn
 
-API_TOKEN = '8120327194:AAHi9btX1rpL2ERHc7QBwzBI_6w4yn7WyIw'
+API_TOKEN = '-----------'
 bot = telebot.TeleBot(API_TOKEN)
 
 
