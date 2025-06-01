@@ -37,17 +37,15 @@ for i in range(1, 15):
     #prob = model.predict_proba(x_valid_norm)
     print("k = ", i)
     print(classification_report(y_valid, pred, zero_division=0))
+    #print(accuracy_score(y_valid, pred))
+    #print(confusion_matrix(y_valid, pred))
 
-'''
-for i in range(30):
-    print(f"Class:\t{y_test_all[i]}")
-    print(f"Pred:\t{pred[i]}")
-    print(f"Prob: {prob[i]}\n")
-'''
-
-#print(classification_report(y_test_all, pred, zero_division=0))
-#print(accuracy_score(y_test, pred))
-#print(confusion_matrix(y_test_all, pred))
+    '''
+    for i in range(30):
+        print(f"Class:\t{y_test_all[i]}")
+        print(f"Pred:\t{pred[i]}")
+        print(f"Prob: {prob[i]}\n")
+    '''
 
 # -------------------------------------------------------------------------------------------------------------------------------------------
 '''
